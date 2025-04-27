@@ -48,9 +48,3 @@ Feel free to fork this project and make improvements! If you'd like to contribut
 
 License
 This project is open-source and available under the MIT License.
-
-vbnet
-Copy
-Edit
-
-You can now copy and paste this directly into your GitHub repository's `README.md` file! Let me know if
