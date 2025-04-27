@@ -1,0 +1,354 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset and Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #4a90e2, #6a1b9a);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 140px;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    mix-blend-mode: multiply;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Header Title */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.4s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: #4a90e2;
+    transition: width 0.4s ease;
+}
+
+nav a:hover {
+    color: #6a1b9a;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem 2rem;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 2rem;
+    color: #6a1b9a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Content Paragraphs */
+p, li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Gesture Grid */
+.gesture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.gesture-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.gesture-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.gesture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(106, 27, 154, 0.2);
+}
+
+/* Button */
+button {
+    background: linear-gradient(90deg, #6a1b9a, #4a90e2);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: 0.4s ease;
+    box-shadow: 0 6px 15px rgba(106, 27, 154, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #4a90e2, #6a1b9a);
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Requirements Cards */
+.requirements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: #4a90e2;
+    color: #e3f2fd;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 3rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.team-card {
+    background: #fff;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(106, 27, 154, 0.3);
+}
+
+.team-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #4a90e2;
+    margin-bottom: 15px;
+}
+
+/* Links */
+.team-links a {
+    margin: 0 8px;
+    color: #4a90e2;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.team-links a:hover {
+    color: #6a1b9a;
+}
+
+/* Feedback Form */
+.feedback-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: #6a1b9a;
+    outline: none;
+}
+
+.feedback-form textarea {
+    min-height: 150px;
+}
+
+.feedback-form button {
+    align-self: center;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.features h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: auto;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+    margin: 10px 0;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 100px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .gesture-card img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gesture-grid,
+    .requirements,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        width: 90px;
+        top: 10px;
+        left: 10px;
+    }
+}
